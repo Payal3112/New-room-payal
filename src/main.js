@@ -6,7 +6,7 @@ import * as THREE from "three";
 import { OrbitControls } from "./utils/OrbitControls.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import Contact from "./sections/Contact";
+
 
 import smokeVertexShader from "./shaders/smoke/vertex.glsl";
 import smokeFragmentShader from "./shaders/smoke/fragment.glsl";
@@ -2087,7 +2087,9 @@ const render = (timestamp) => {
   renderer.render(scene, camera);
 
   window.requestAnimationFrame(render);
-  <Contact />
+      /* ✅ This is correct usage */
 };
+
+
 
 render();
